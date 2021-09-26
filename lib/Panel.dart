@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:eight_queens_game/Theme.dart';
-import 'dart:js' as js;
 
-List buildPanel(VoidCallback resetMethod)
+List buildPanel(
+    VoidCallback resetMethod,
+    VoidCallback howMethod,
+    VoidCallback infoMethod,
+    VoidCallback githubMethod
+)
 {
     final List <Widget> panel =
     [
@@ -38,10 +42,7 @@ List buildPanel(VoidCallback resetMethod)
                 backgroundColor: AppColors.appTheme,
                 tooltip: "¿Cómo se juega?",
                 hoverElevation: 10,
-                onPressed: ()
-                {
-
-                },
+                onPressed: howMethod,
                 child: Center
                 (
                     child: Container
@@ -66,7 +67,7 @@ List buildPanel(VoidCallback resetMethod)
                 backgroundColor: AppColors.appTheme,
                 tooltip: "Más información",
                 hoverElevation: 10,
-                onPressed: (){},
+                onPressed: infoMethod,
                 child: Center
                 (
                     child: Container
@@ -91,11 +92,7 @@ List buildPanel(VoidCallback resetMethod)
                 backgroundColor: AppColors.appTheme,
                 tooltip: "Código fuente",
                 hoverElevation: 10,
-                onPressed: (){}, /*async
-                {
-                    String link = "https://github.com/arhcoder/eight-queens-game/";
-                    js.context.callMethod('open', [link]);
-                },*/
+                onPressed: githubMethod,
                 child: Center
                 (
                     child: Container

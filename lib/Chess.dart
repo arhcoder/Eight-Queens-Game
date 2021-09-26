@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:eight_queens_game/Theme.dart';
+
 import 'Panel.dart';
+import 'Dialogs.dart';
 
 class ChessTable extends StatefulWidget
 {
@@ -29,63 +31,6 @@ class ChessTableState extends State <ChessTable>
         ['', '', '', '', '', '', '', ''],
         ['', '', '', '', '', '', '', ''],
     ];
-
-    Widget buildGame()
-    {
-        return (MediaQuery.of(context).size.width >= 600)?
-        // Escritorio //
-        Row
-        (
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-
-            children:
-            [
-                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                Container
-                (
-                    width: 488,
-                    height: 488,
-                    child: buildChessTable()
-                ),
-
-                SizedBox(width: 14.0),
-
-                Column
-                (
-                    children: buildPanel(reset)
-                )
-            ]
-        ):
-
-        // Teléfono //
-        Column
-        (
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-
-            children:
-            [
-                Container
-                (
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    height: MediaQuery.of(context).size.width * 0.9,
-                    child: buildChessTable()
-                ),
-
-                SizedBox(height: 14.0),
-
-                Row
-                (
-                    children:
-                    [
-                        SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                        Row(children: buildPanel(reset))
-                    ]
-                )
-            ]
-        );
-    }
 
     Widget buildChessTable()
     {
@@ -312,6 +257,108 @@ class ChessTableState extends State <ChessTable>
     @override
     Widget build(BuildContext context)
     {
-        return buildGame();
+        return (MediaQuery.of(context).size.width >= 600)?
+
+        // Escritorio //
+        Row
+        (
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children:
+            [
+                // Margen izquierdo para centrar el tablero sin contar el panel de botones //
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+
+                // Tablero de ajedrez //
+                Container
+                (
+                    width: 488,
+                    height: 488,
+                    child: buildChessTable()
+                ),
+
+                SizedBox(width: 14.0),
+
+                // Panel vertical de botones //
+                Column
+                (
+                    children: buildPanel(
+                        reset,
+                        (){
+                            showDialog(
+                                context: context,
+                                builder: (context) => buildHowDialog(context)
+                            );
+                        },
+                        (){
+                            showDialog(
+                                context: context,
+                                builder: (context) => buildInfoDialog(context)
+                            );
+                        },
+                        (){
+                            showDialog(
+                                context: context,
+                                builder: (context) => buildGithubDialog(context)
+                            );
+                        }
+                    )
+                )
+            ]
+        ):
+
+        // Teléfono //
+        Column
+        (
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+
+            children:
+            [
+                // Tablero //
+                Container
+                (
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.width * 0.9,
+                    child: buildChessTable()
+                ),
+
+                SizedBox(height: 14.0),
+
+                // Panel horizontal de botones //
+                Row
+                (
+                    children:
+                    [
+                        SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+                        Row
+                        (
+                            children: buildPanel(
+                                reset,
+                                (){
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => buildHowDialog(context)
+                                    );
+                                },
+                                (){
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => buildInfoDialog(context)
+                                    );
+                                },
+                                (){
+                                    showDialog(
+                                        context: context,
+                                        builder: (context) => buildGithubDialog(context)
+                                    );
+                                }
+                            )
+                        )
+                    ]
+                )
+            ]
+        );
     }
 }
