@@ -1,10 +1,18 @@
+import 'package:eight_queens_game/Theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'Header.dart';
 import 'Chess.dart';
 
 void main()
 {
     runApp(MyApp());
+
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+            systemNavigationBarColor: AppColors.closedBox
+        )
+    );
 }
 
 class MyApp extends StatelessWidget
@@ -15,7 +23,7 @@ class MyApp extends StatelessWidget
         return MaterialApp
         (
             debugShowCheckedModeBanner: false,
-            title: 'Ocho reinas Juego',
+            title: '♟ Ocho reinas - Juego',
             home: Scaffold
             (
                 appBar: buildAppBar(),
