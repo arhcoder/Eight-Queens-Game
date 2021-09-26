@@ -227,9 +227,13 @@ class ChessTableState extends State <ChessTable>
                     (
                         child: Container
                         (
-                            width: 40.0,
-                            height: 40.0,
-                            child: SvgPicture.asset("img/queen.svg")
+                            child: FractionallySizedBox
+                            (
+                                alignment: Alignment.center,
+                                widthFactor: 0.80,
+                                heightFactor: 0.80,
+                                child: SvgPicture.asset("img/queen.svg")
+                            )
                         )
                     )
                 );
@@ -319,8 +323,8 @@ class ChessTableState extends State <ChessTable>
                 // Tablero //
                 Container
                 (
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    height: MediaQuery.of(context).size.width * 0.9,
+                    width: MediaQuery.of(context).size.width * 0.90,
+                    height: MediaQuery.of(context).size.width * 0.90,
                     child: buildChessTable()
                 ),
 

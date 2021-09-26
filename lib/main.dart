@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget
         return MaterialApp
         (
             debugShowCheckedModeBanner: false,
-            title: 'Ocho reinas - Juego',
+            title: 'Ocho reinas Juego',
             home: Scaffold
             (
                 appBar: buildAppBar(),
