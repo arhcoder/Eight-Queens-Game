@@ -25,7 +25,7 @@ AlertDialog buildHowDialog(BuildContext context)
             ]
         ),
 
-        content: Text("En el siguiente tablero de ajedrez coloca OCHO reinas de modo que no puedan atacarse mutuamente.\n\n* Las reinas pueden atacar en cruz y en diagonal.\n* Haz clic sobre una casilla para colocar una reina."),
+        content: Text("Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n* Las reinas no pueden atacarse mutuamente.\n* Las reinas atacan en cruz y en diagonal.\n* Haz clic sobre una casilla para colocar una reina."),
         actions:
         [
             ElevatedButton
@@ -64,7 +64,7 @@ AlertDialog buildInfoDialog(BuildContext context)
             ]
         ),
 
-        content: Text("Desarrollado por Alejandro Ramos | @arhcoder.\n\n* Agradecimiento especial a Sriram Thiagarajan.\n* Iconos sacados de Flaticon.com"),
+        content: Text("Desarrollado por Alejandro Ramos | @arhcoder.\n\n* Agradecimiento especial a Sriram Thiagarajan.\n* Iconos sacados de Flaticon.com.\n* Desarrollado con Flutter."),
 
         actions:
         [

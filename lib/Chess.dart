@@ -261,6 +261,14 @@ class ChessTableState extends State <ChessTable>
     @override
     Widget build(BuildContext context)
     {
+        Future.delayed(Duration.zero, ()
+        {
+            showDialog(
+                context: context,
+                builder: (context) => buildHowDialog(context)
+            );
+        });
+
         return (MediaQuery.of(context).size.width >= 600)?
 
         // Escritorio //

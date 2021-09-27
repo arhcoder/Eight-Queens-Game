@@ -1,6 +1,7 @@
 import 'package:eight_queens_game/Theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'Header.dart';
 import 'Chess.dart';
 
@@ -20,10 +21,11 @@ class MyApp extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
+        // Aplicación //
         return MaterialApp
         (
             debugShowCheckedModeBanner: false,
-            title: '♟ Ocho Reinas | Juego online',
+            title: '♟ Ocho Reinas - Juego online',
             home: Scaffold
             (
                 appBar: buildAppBar(),
