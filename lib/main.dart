@@ -7,13 +7,13 @@ import 'Chess.dart';
 
 void main()
 {
-    runApp(MyApp());
-
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(
-            systemNavigationBarColor: AppColors.closedBox
+            systemNavigationBarColor: AppColors.darkBox
         )
     );
+
+    runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget
         return MaterialApp
         (
             debugShowCheckedModeBanner: false,
-            
+
             title: '♟ Ocho Reinas | Juego online',
             home: Scaffold
             (
