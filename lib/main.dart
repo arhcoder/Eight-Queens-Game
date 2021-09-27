@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        // Aplicación //
         return MaterialApp
         (
             debugShowCheckedModeBanner: false,
-            title: '♟ Ocho Reinas - Juego online',
+            
+            title: '♟ Ocho Reinas | Juego online',
             home: Scaffold
             (
                 appBar: buildAppBar(),
