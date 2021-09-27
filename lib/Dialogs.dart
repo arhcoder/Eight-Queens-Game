@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:eight_queens_game/Theme.dart';
 import 'dart:js' as js;
 
@@ -6,14 +7,31 @@ AlertDialog buildHowDialog(BuildContext context)
 {
     return AlertDialog
     (
-        title: Text("¿Cómo se juega?"),
-        content: Text("En el siguiente tablero de ajedrez, coloca OCHO reinas de modo que no puedan atacarse mutuamente.\nHaz clic sobre una casilla para colocar una reina."),
+        title: Row
+        (
+            children:
+            [
+                Flexible
+                (
+                    child: Container
+                    (
+                        width: 60.0,
+                        height: 60.0,
+                        child: SvgPicture.asset("img/rules.svg")
+                    )
+                ),
+                SizedBox(width: 20.0),
+                Text("¿Cómo jugar?")
+            ]
+        ),
+
+        content: Text("En el siguiente tablero de ajedrez coloca OCHO reinas de modo que no puedan atacarse mutuamente.\n\n* Las reinas pueden atacar en cruz y en diagonal.\n* Haz clic sobre una casilla para colocar una reina."),
         actions:
         [
             ElevatedButton
             (
                 onPressed: (){Navigator.of(context).pop();},
-                child: Padding(padding: EdgeInsets.all(8.0), child: Text("Okay")),
+                child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
                 style: ButtonStyle
                 (
                     backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
@@ -28,14 +46,32 @@ AlertDialog buildInfoDialog(BuildContext context)
 {
     return AlertDialog
     (
-        title: Text("Más Información"),
-        content: Text("Desarrollado por Alejandro Ramos | @arhcoder.\nEste es un mero ejercicio de práctica hecho por entretenimiento.\nAgradecimiento especial a Sriram Thiagarajan."),
+        title: Row
+        (
+            children:
+            [
+                Flexible
+                (
+                    child: Container
+                    (
+                        width: 40.0,
+                        height: 40.0,
+                        child: SvgPicture.asset("img/information.svg")
+                    )
+                ),
+                SizedBox(width: 20.0),
+                Text("Acerca de...")
+            ]
+        ),
+
+        content: Text("Desarrollado por Alejandro Ramos | @arhcoder.\n\n* Agradecimiento especial a Sriram Thiagarajan.\n* Iconos sacados de Flaticon.com"),
+
         actions:
         [
             ElevatedButton
             (
                 onPressed: (){Navigator.of(context).pop();},
-                child: Padding(padding: EdgeInsets.all(8.0), child: Text("Okay")),
+                child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
                 style: ButtonStyle
                 (
                     backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
@@ -50,7 +86,24 @@ AlertDialog buildGithubDialog(BuildContext context)
 {
     return AlertDialog
     (
-        title: Text("Código fuente"),
+        title: Row
+        (
+            children:
+            [
+                Flexible
+                (
+                    child: Container
+                    (
+                        width: 40.0,
+                        height: 40.0,
+                        child: SvgPicture.asset("img/code.svg")
+                    )
+                ),
+                SizedBox(width: 20.0),
+                Text("Código fuente")
+            ]
+        ),
+
         content: Text("¿Quieres revisar el código fuente en Dart/Flutter, de este proyecto?\n"),
         actions:
         [

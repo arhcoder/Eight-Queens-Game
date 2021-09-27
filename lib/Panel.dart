@@ -40,7 +40,7 @@ List buildPanel(
             child: FloatingActionButton
             (
                 backgroundColor: AppColors.appTheme,
-                tooltip: "¿Cómo se juega?",
+                tooltip: "¿Cómo jugar?",
                 hoverElevation: 10,
                 onPressed: howMethod,
                 child: Center
@@ -65,7 +65,7 @@ List buildPanel(
             child: FloatingActionButton
             (
                 backgroundColor: AppColors.appTheme,
-                tooltip: "Más información",
+                tooltip: "Acerca de...",
                 hoverElevation: 10,
                 onPressed: infoMethod,
                 child: Center

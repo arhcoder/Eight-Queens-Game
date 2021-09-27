@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget
         return MaterialApp
         (
             debugShowCheckedModeBanner: false,
-            title: '♟ Ocho reinas - Juego',
+            title: '♟ Ocho Reinas | Juego online',
             home: Scaffold
             (
                 appBar: buildAppBar(),
