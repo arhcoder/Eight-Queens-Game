@@ -10,8 +10,7 @@ class ChessTable extends StatefulWidget
     // Variables globales //
     int chessTableLenght = 8;
     int queens = 0;
-
-    ChessTable({Key key}) : super(key: key);
+    bool instructionsForFistTime = true;
 
     @override
     ChessTableState createState() => ChessTableState();
@@ -261,13 +260,18 @@ class ChessTableState extends State <ChessTable>
     @override
     Widget build(BuildContext context)
     {
-        Future.delayed(Duration.zero, ()
+        // Instrucciones del juego al iniciar //
+        if (widget.instructionsForFistTime)
         {
-            showDialog(
-                context: context,
-                builder: (context) => buildHowDialog(context)
-            );
-        });
+            Future.delayed(Duration.zero, ()
+            {
+                showDialog(
+                    context: context,
+                    builder: (context) => buildHowDialog(context)
+                );
+            });
+        }
+        widget.instructionsForFistTime = false;
 
         return (MediaQuery.of(context).size.width >= 600)?
 
