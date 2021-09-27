@@ -25,7 +25,7 @@ AlertDialog buildHowDialog(BuildContext context)
             ]
         ),
 
-        content: Text("Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n* Las reinas no pueden atacarse mutuamente.\n* Las reinas atacan en cruz y en diagonal.\n* Haz clic sobre una casilla para colocar una reina."),
+        content: Text("Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n• Las reinas no pueden atacarse mutuamente.\n• Las reinas atacan en cruz y en diagonal.\n• Haz clic sobre una casilla para colocar una reina."),
         actions:
         [
             ElevatedButton
@@ -64,7 +64,7 @@ AlertDialog buildInfoDialog(BuildContext context)
             ]
         ),
 
-        content: Text("Desarrollado por Alejandro Ramos | @arhcoder.\n\n* Agradecimiento especial a Sriram Thiagarajan.\n* Iconos sacados de Flaticon.com.\n* Desarrollado con Flutter."),
+        content: Text("Desarrollado por Alejandro Ramos | @arhcoder.\n\n• Agradecimiento especial a Sriram Thiagarajan.\n• Iconos sacados de Flaticon.com.\n• Desarrollado con Flutter."),
 
         actions:
         [
@@ -104,7 +104,7 @@ AlertDialog buildGithubDialog(BuildContext context)
             ]
         ),
 
-        content: Text("¿Quieres revisar el código fuente en Dart/Flutter, de este proyecto?\n"),
+        content: Text("¿Quieres revisar el código fuente en Dart/Flutter de este proyecto?\n"),
         actions:
         [
             TextButton
