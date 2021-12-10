@@ -28,15 +28,19 @@ AlertDialog buildHowDialog(BuildContext context)
         content: Text("Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n• Las reinas no pueden atacarse mutuamente.\n• Las reinas atacan en cruz y en diagonal.\n• Haz clic sobre una casilla para colocar una reina."),
         actions:
         [
-            ElevatedButton
+            Padding
             (
-                onPressed: (){Navigator.of(context).pop();},
-                child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
-                style: ButtonStyle
+                padding: EdgeInsets.all(12.0),
+                child: ElevatedButton
                 (
-                    backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
-                    foregroundColor: MaterialStateProperty.all(Colors.white),
-                    mouseCursor: MaterialStateMouseCursor.clickable
+                    onPressed: (){Navigator.of(context).pop();},
+                    child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
+                    style: ButtonStyle
+                    (
+                        backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
+                        foregroundColor: MaterialStateProperty.all(Colors.white),
+                        mouseCursor: MaterialStateMouseCursor.clickable
+                    )
                 )
             )
         ]
@@ -68,15 +72,19 @@ AlertDialog buildInfoDialog(BuildContext context)
 
         actions:
         [
-            ElevatedButton
+            Padding
             (
-                onPressed: (){Navigator.of(context).pop();},
-                child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
-                style: ButtonStyle
+                padding: EdgeInsets.all(12.0),
+                child: ElevatedButton
                 (
-                    backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
-                    foregroundColor: MaterialStateProperty.all(Colors.white),
-                    mouseCursor: MaterialStateMouseCursor.clickable
+                    onPressed: (){Navigator.of(context).pop();},
+                    child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
+                    style: ButtonStyle
+                    (
+                        backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
+                        foregroundColor: MaterialStateProperty.all(Colors.white),
+                        mouseCursor: MaterialStateMouseCursor.clickable
+                    )
                 )
             )
         ]
@@ -107,26 +115,34 @@ AlertDialog buildGithubDialog(BuildContext context)
         content: Text("¿Quieres revisar el código fuente en Dart/Flutter de este proyecto?\n"),
         actions:
         [
-            TextButton
+            Padding
             (
-                onPressed: (){Navigator.of(context).pop();},
-                child: Text("No")
-            ),
-            ElevatedButton
-            (
-                onPressed: () async
-                {
-                    String link = "https://github.com/arhcoder/eight-queens-game/";
-                    js.context.callMethod('open', [link]);
-                    Navigator.of(context).pop();
-                },
-
-                child: Padding(padding: EdgeInsets.all(8.0), child: Text("Ver código")),
-                style: ButtonStyle
+                padding: const EdgeInsets.only(bottom: 12.0),
+                child: TextButton
                 (
-                    backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
-                    foregroundColor: MaterialStateProperty.all(Colors.white),
-                    mouseCursor: MaterialStateMouseCursor.clickable
+                    onPressed: (){Navigator.of(context).pop();},
+                    child: Text("No")
+                )
+            ),
+            Padding
+            (
+                padding: EdgeInsets.only(right: 12.0, bottom: 12.0),
+                child: ElevatedButton
+                (
+                    onPressed: () async
+                    {
+                        String link = "https://github.com/arhcoder/eight-queens-game/";
+                        js.context.callMethod('open', [link]);
+                        Navigator.of(context).pop();
+                    },
+
+                    child: Padding(padding: EdgeInsets.all(8.0), child: Text("Ver código")),
+                    style: ButtonStyle
+                    (
+                        backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
+                        foregroundColor: MaterialStateProperty.all(Colors.white),
+                        mouseCursor: MaterialStateMouseCursor.clickable
+                    )
                 )
             )
         ]

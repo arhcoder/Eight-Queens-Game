@@ -178,23 +178,38 @@ class ChessTableState extends State <ChessTable>
         print(widget.queens);
         if (widget.queens == widget.chessTableLenght)
         {
-            // Elimina el SnackBar que esté corriendo //
-            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            showWinMessage();
+        }
+        setState((){});
+    }
 
-            // Muestra el mensaje pertinente //
+    bool isSnackbarActive = false;
+    void showWinMessage()
+    {
+        // Muestra el mensaje de victoria si no hay SnackBars activas //
+        if (!isSnackbarActive)
+        {
+            isSnackbarActive = true;
             ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar
                 (
+                    padding: EdgeInsets.symmetric(vertical: 6.88),
                     content: Text
                     (
                         "¡Felicidades! Ganaste el juego...",
                         textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 16)
                     ),
-                    backgroundColor: AppColors.closedBox
+                    backgroundColor: AppColors.closedBox,
+                    duration: Duration(milliseconds: 2888),
                 )
-            );
+            )
+            .closed
+            .then((SnackBarClosedReason reason)
+            {
+                isSnackbarActive = false;
+            });
         }
-        setState((){});
     }
 
     Widget buildGridItems(int row, int column)
