@@ -5,6 +5,10 @@ import 'package:eight_queens_game/Theme.dart';
 import 'Panel.dart';
 import 'Dialogs.dart';
 
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'dart:math';
+
 class ChessTable extends StatefulWidget
 {
     // Variables globales //
@@ -257,6 +261,34 @@ class ChessTableState extends State <ChessTable>
         setState((){});
     }
 
+    void solve()
+    {
+        /// Obtiene de una API personal, una solución aleatoria del problema.
+        /// y le expresa en el tablero.
+        
+        // Limpia el tablero.
+        reset();
+
+        // Obtiene un número aleatorio entre 0 y 92 - 1; para seleccionar
+        // aleatoriamente una de las 92 posibles soluciones del problema.
+        int randomSolution = Random().nextInt(92 - 1);
+
+        // Obtiene la información de la API.
+        final apiURL = "https://arhcoder.github.io/eight-queens-solver/eight-queens-solutions.json";
+        http.get(Uri.parse(apiURL)).then((http.Response response)
+        {
+
+            // Obtiene el cuerpo de soluciones.
+            final APIMap = jsonDecode(response.body);
+
+            // Lee una solución aleatoria y la dibuaja en el tablero.
+            for (var i = 0; i < 8; i++)
+            {
+                putAQueen(i, int.parse(APIMap["solutions"][randomSolution][i]));
+            }
+        });
+    }
+
     @override
     Widget build(BuildContext context)
     {
@@ -301,6 +333,7 @@ class ChessTableState extends State <ChessTable>
                 (
                     children: buildPanel(
                         reset,
+                        solve,
                         (){
                             showDialog(
                                 context: context,
@@ -352,6 +385,7 @@ class ChessTableState extends State <ChessTable>
                         (
                             children: buildPanel(
                                 reset,
+                                solve,
                                 (){
                                     showDialog(
                                         context: context,
