@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:eight_queens_game/Theme.dart';
 
+import 'generated/l10n.dart';
+
 List buildPanel(
     VoidCallback resetMethod,
     VoidCallback solveMethod,
@@ -20,7 +22,7 @@ List buildPanel(
             child: FloatingActionButton
             (
                 backgroundColor: AppColors.takenBox,
-                tooltip: "Reiniciar",
+                tooltip: S.current.button_reset,
                 hoverElevation: 10,
                 onPressed: resetMethod,
                 child: Icon
@@ -41,7 +43,7 @@ List buildPanel(
             child: FloatingActionButton
             (
                 backgroundColor: AppColors.takenBox,
-                tooltip: "Solucionar",
+                tooltip: S.current.button_solve,
                 hoverElevation: 10,
                 onPressed: solveMethod,
                 child: Icon
@@ -62,7 +64,7 @@ List buildPanel(
             child: FloatingActionButton
             (
                 backgroundColor: AppColors.appTheme,
-                tooltip: "¿Cómo jugar?",
+                tooltip: S.current.button_howToPlay,
                 hoverElevation: 10,
                 onPressed: howMethod,
                 child: Center
@@ -87,7 +89,7 @@ List buildPanel(
             child: FloatingActionButton
             (
                 backgroundColor: AppColors.appTheme,
-                tooltip: "Acerca de...",
+                tooltip: S.current.button_about,
                 hoverElevation: 10,
                 onPressed: infoMethod,
                 child: Center
@@ -112,7 +114,7 @@ List buildPanel(
             child: FloatingActionButton
             (
                 backgroundColor: AppColors.appTheme,
-                tooltip: "Código fuente",
+                tooltip: S.current.button_github,
                 hoverElevation: 10,
                 onPressed: githubMethod,
                 child: Center

@@ -36,44 +36,164 @@ class S {
   }
 
   /// `EIGHT QUEENS GAME`
-  String get title {
+  String get app_title {
     return Intl.message(
       'EIGHT QUEENS GAME',
-      name: 'title',
+      name: 'app_title',
       desc: '',
       args: [],
     );
   }
 
-  // skipped getter for the 'button-reset' key
+  /// `Reset`
+  String get button_reset {
+    return Intl.message(
+      'Reset',
+      name: 'button_reset',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'button-solve' key
+  /// `Solve`
+  String get button_solve {
+    return Intl.message(
+      'Solve',
+      name: 'button_solve',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'button-howToPlay' key
+  /// `How to play`
+  String get button_howToPlay {
+    return Intl.message(
+      'How to play',
+      name: 'button_howToPlay',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'howToPlay-title' key
+  /// `How to play`
+  String get howToPlay_title {
+    return Intl.message(
+      'How to play',
+      name: 'howToPlay_title',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'howToPlay-description' key
+  /// `Put EIGHT queens in the chessboard.\n\n• Queens must not attack each other.\n• Queens attack cross and diagonal.\n• Click on a square to place a queen.`
+  String get howToPlay_description {
+    return Intl.message(
+      'Put EIGHT queens in the chessboard.\n\n• Queens must not attack each other.\n• Queens attack cross and diagonal.\n• Click on a square to place a queen.',
+      name: 'howToPlay_description',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'howToPlay-button' key
+  /// `Got it!`
+  String get howToPlay_button {
+    return Intl.message(
+      'Got it!',
+      name: 'howToPlay_button',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'button-info' key
+  /// `About...`
+  String get button_about {
+    return Intl.message(
+      'About...',
+      name: 'button_about',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'info-title' key
+  /// `About...`
+  String get about_title {
+    return Intl.message(
+      'About...',
+      name: 'about_title',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'info-description' key
+  /// `Developed by Alejandro Ramos | @arhcoder.\n\n• Special thanks to Sriram Thiagarajan.\n• Icons taken from Flaticon.com.\n• Made with Flutter 💙`
+  String get about_description {
+    return Intl.message(
+      'Developed by Alejandro Ramos | @arhcoder.\n\n• Special thanks to Sriram Thiagarajan.\n• Icons taken from Flaticon.com.\n• Made with Flutter 💙',
+      name: 'about_description',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'info-button' key
+  /// `Got it!`
+  String get about_button {
+    return Intl.message(
+      'Got it!',
+      name: 'about_button',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'button-github' key
+  /// `Source code`
+  String get button_github {
+    return Intl.message(
+      'Source code',
+      name: 'button_github',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'github-title' key
+  /// `Source code`
+  String get github_title {
+    return Intl.message(
+      'Source code',
+      name: 'github_title',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'github-description' key
+  /// `Want to check out the Dart/Flutter source code for this project?\n`
+  String get github_description {
+    return Intl.message(
+      'Want to check out the Dart/Flutter source code for this project?\n',
+      name: 'github_description',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'github-yesButton' key
+  /// `View code.`
+  String get github_yesButton {
+    return Intl.message(
+      'View code.',
+      name: 'github_yesButton',
+      desc: '',
+      args: [],
+    );
+  }
 
-  // skipped getter for the 'github-noButton' key
+  /// `No`
+  String get github_noButton {
+    return Intl.message(
+      'No',
+      name: 'github_noButton',
+      desc: '',
+      args: [],
+    );
+  }
 
   /// `Congratulations! You won the game...`
   String get winMessage {

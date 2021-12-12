@@ -21,7 +21,22 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "title" : MessageLookupByLibrary.simpleMessage("JUEGO DE LAS OCHO REINAS"),
+    "about_button" : MessageLookupByLibrary.simpleMessage("Entendido"),
+    "about_description" : MessageLookupByLibrary.simpleMessage("Desarrollado por Alejandro Ramos | @arhcoder.\n\n• Agradecimiento especial a Sriram Thiagarajan.\n• Iconos sacados de Flaticon.com.\n• Desarrollado con Flutter 💙"),
+    "about_title" : MessageLookupByLibrary.simpleMessage("Acerca de..."),
+    "app_title" : MessageLookupByLibrary.simpleMessage("JUEGO DE LAS OCHO REINAS"),
+    "button_about" : MessageLookupByLibrary.simpleMessage("Acerca de..."),
+    "button_github" : MessageLookupByLibrary.simpleMessage("Código fuente"),
+    "button_howToPlay" : MessageLookupByLibrary.simpleMessage("¿Cómo jugar?"),
+    "button_reset" : MessageLookupByLibrary.simpleMessage("Reiniciar"),
+    "button_solve" : MessageLookupByLibrary.simpleMessage("Solucionar"),
+    "github_description" : MessageLookupByLibrary.simpleMessage("¿Quieres revisar el código fuente en Dart/Flutter de este proyecto?\n"),
+    "github_noButton" : MessageLookupByLibrary.simpleMessage("No"),
+    "github_title" : MessageLookupByLibrary.simpleMessage("Código fuente"),
+    "github_yesButton" : MessageLookupByLibrary.simpleMessage("Ver código"),
+    "howToPlay_button" : MessageLookupByLibrary.simpleMessage("Entendido"),
+    "howToPlay_description" : MessageLookupByLibrary.simpleMessage("Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n• Las reinas no pueden atacarse mutuamente.\n• Las reinas atacan en cruz y en diagonal.\n• Haz clic sobre una casilla para colocar una reina."),
+    "howToPlay_title" : MessageLookupByLibrary.simpleMessage("¿Cómo jugar?"),
     "winMessage" : MessageLookupByLibrary.simpleMessage("¡Felicidades! Ganaste el juego...")
   };
 }

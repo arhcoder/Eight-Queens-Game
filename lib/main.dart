@@ -29,10 +29,20 @@ class MyApp extends StatelessWidget
         (
             debugShowCheckedModeBanner: false,
 
+            localizationsDelegates:
+            [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate
+            ],
+
+            supportedLocales: S.delegate.supportedLocales,
+
             title: '♟ Ocho Reinas | Juego online',
             home: Scaffold
             (
-                appBar: buildAppBar(),
+                appBar: buildAppBar("${S.current.app_title}"),
 
                 body: SingleChildScrollView
                 (
@@ -48,17 +58,7 @@ class MyApp extends StatelessWidget
                         )
                     )
                 )
-            ),
-            
-            localizationsDelegates:
-            [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate
-            ],
-
-            supportedLocales: S.delegate.supportedLocales
+            )
         );
     }
 }

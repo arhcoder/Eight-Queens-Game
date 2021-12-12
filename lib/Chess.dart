@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:eight_queens_game/Theme.dart';
+import 'generated/l10n.dart';
 
 import 'Panel.dart';
 import 'Dialogs.dart';
@@ -196,7 +197,7 @@ class ChessTableState extends State <ChessTable>
                     padding: EdgeInsets.symmetric(vertical: 6.88),
                     content: Text
                     (
-                        "¡Felicidades! Ganaste el juego...",
+                        S.current.winMessage,
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 16)
                     ),

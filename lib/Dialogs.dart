@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:eight_queens_game/Theme.dart';
+import 'generated/l10n.dart';
+
 import 'dart:js' as js;
 
 AlertDialog buildHowDialog(BuildContext context)
@@ -21,11 +24,11 @@ AlertDialog buildHowDialog(BuildContext context)
                     )
                 ),
                 SizedBox(width: 20.0),
-                Text("¿Cómo jugar?")
+                Text(S.current.howToPlay_title)
             ]
         ),
 
-        content: Text("Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n• Las reinas no pueden atacarse mutuamente.\n• Las reinas atacan en cruz y en diagonal.\n• Haz clic sobre una casilla para colocar una reina."),
+        content: Text(S.current.howToPlay_description),
         actions:
         [
             Padding
@@ -33,8 +36,8 @@ AlertDialog buildHowDialog(BuildContext context)
                 padding: EdgeInsets.all(12.0),
                 child: ElevatedButton
                 (
-                    onPressed: (){Navigator.of(context).pop();},
-                    child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
+                    onPressed: (){ Navigator.of(context).pop(); },
+                    child: Padding(padding: EdgeInsets.all(8.0), child: Text(S.current.howToPlay_button)),
                     style: ButtonStyle
                     (
                         backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
@@ -46,6 +49,7 @@ AlertDialog buildHowDialog(BuildContext context)
         ]
     );
 }
+
 AlertDialog buildInfoDialog(BuildContext context)
 {
     return AlertDialog
@@ -64,11 +68,11 @@ AlertDialog buildInfoDialog(BuildContext context)
                     )
                 ),
                 SizedBox(width: 20.0),
-                Text("Acerca de...")
+                Text(S.current.about_title)
             ]
         ),
 
-        content: Text("Desarrollado por Alejandro Ramos | @arhcoder.\n\n• Agradecimiento especial a Sriram Thiagarajan.\n• Iconos sacados de Flaticon.com.\n• Desarrollado con Flutter."),
+        content: Text(S.current.about_description),
 
         actions:
         [
@@ -77,8 +81,8 @@ AlertDialog buildInfoDialog(BuildContext context)
                 padding: EdgeInsets.all(12.0),
                 child: ElevatedButton
                 (
-                    onPressed: (){Navigator.of(context).pop();},
-                    child: Padding(padding: EdgeInsets.all(8.0), child: Text("Entendido")),
+                    onPressed: (){ Navigator.of(context).pop(); },
+                    child: Padding(padding: EdgeInsets.all(8.0), child: Text(S.current.about_button)),
                     style: ButtonStyle
                     (
                         backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
@@ -90,6 +94,7 @@ AlertDialog buildInfoDialog(BuildContext context)
         ]
     );
 }
+
 AlertDialog buildGithubDialog(BuildContext context)
 {
     return AlertDialog
@@ -108,11 +113,11 @@ AlertDialog buildGithubDialog(BuildContext context)
                     )
                 ),
                 SizedBox(width: 20.0),
-                Text("Código fuente")
+                Text(S.current.github_title)
             ]
         ),
 
-        content: Text("¿Quieres revisar el código fuente en Dart/Flutter de este proyecto?\n"),
+        content: Text(S.current.github_description),
         actions:
         [
             Padding
@@ -120,8 +125,8 @@ AlertDialog buildGithubDialog(BuildContext context)
                 padding: const EdgeInsets.only(bottom: 12.0),
                 child: TextButton
                 (
-                    onPressed: (){Navigator.of(context).pop();},
-                    child: Text("No")
+                    onPressed: (){ Navigator.of(context).pop(); },
+                    child: Text(S.current.github_noButton)
                 )
             ),
             Padding
@@ -136,7 +141,7 @@ AlertDialog buildGithubDialog(BuildContext context)
                         Navigator.of(context).pop();
                     },
 
-                    child: Padding(padding: EdgeInsets.all(8.0), child: Text("Ver código")),
+                    child: Padding(padding: EdgeInsets.all(8.0), child: Text(S.current.github_yesButton)),
                     style: ButtonStyle
                     (
                         backgroundColor: MaterialStateProperty.all(AppColors.appTheme),
