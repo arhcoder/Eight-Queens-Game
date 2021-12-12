@@ -1,0 +1,25 @@
+{
+    "title": "JUEGO DE LAS OCHO REINAS",
+
+    "button-reset": "Reiniciar",
+
+    "button-solve": "Solucionar",
+
+    "button-howToPlay": "¿Cómo jugar?",
+        "howToPlay-title": "¿Cómo jugar?",
+        "howToPlay-description": "Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n• Las reinas no pueden atacarse mutuamente.\n• Las reinas atacan en cruz y en diagonal.\n• Haz clic sobre una casilla para colocar una reina.",
+        "howToPlay-button": "Entendido",
+
+    "button-info": "Acerca de...",
+        "info-title": "Acerca de...",
+        "info-description": "Desarrollado por Alejandro Ramos | @arhcoder.\n\n• Agradecimiento especial a Sriram Thiagarajan.\n• Iconos sacados de Flaticon.com.\n• Desarrollado con Flutter 💙",
+        "info-button": "Entendido",
+
+    "button-github": "Código fuente",
+        "github-title": "Código fuente",
+        "github-description": "¿Quieres revisar el código fuente en Dart/Flutter de este proyecto?\n",
+        "github-yesButton": "Ver código",
+        "github-noButton": "No",
+    
+    "winMessage": "¡Felicidades! Ganaste el juego..."
+}

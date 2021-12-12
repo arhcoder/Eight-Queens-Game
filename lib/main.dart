@@ -1,6 +1,10 @@
-import 'package:eight_queens_game/Theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:eight_queens_game/Theme.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'generated/l10n.dart';
+
+import 'package:eight_queens_game/Theme.dart';
 
 import 'Header.dart';
 import 'Chess.dart';
@@ -44,7 +48,17 @@ class MyApp extends StatelessWidget
                         )
                     )
                 )
-            )
+            ),
+            
+            localizationsDelegates:
+            [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate
+            ],
+
+            supportedLocales: S.delegate.supportedLocales
         );
     }
 }

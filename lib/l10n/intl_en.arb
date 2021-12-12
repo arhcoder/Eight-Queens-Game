@@ -1,0 +1,25 @@
+{
+    "title": "EIGHT QUEENS GAME",
+
+    "button-reset": "Reset",
+    
+    "button-solve": "Solve",
+
+    "button-howToPlay": "How to play",
+        "howToPlay-title": "How to play",
+        "howToPlay-description": "Put EIGHT queens in the chessboard.\n\n• Queens must not attack each other.\n• Queens attack cross and diagonal.\n• Click on a square to place a queen.",
+        "howToPlay-button": "Got it!",
+
+    "button-info": "About...",
+        "info-title": "About...",
+        "info-description": "Developed by Alejandro Ramos | @arhcoder.\n\n• Special thanks to Sriram Thiagarajan.\n• Icons taken from Flaticon.com.\n• Made with Flutter 💙",
+        "info-button": "Got it!",
+
+    "button-github": "Source code",
+        "github-title": "Source code",
+        "github-description": "Want to check out the Dart/Flutter source code for this project?\n",
+        "github-yesButton": "View code.",
+        "github-noButton": "No",
+    
+    "winMessage": "Congratulations! You won the game..."
+}
