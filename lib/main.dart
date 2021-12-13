@@ -15,6 +15,10 @@ void main()
         )
     );
 
+    // String currentLanguage =
+    // Get.deviceLocale.languageCode != "es"? "en": "es";
+    // S.load(Locale(currentLanguage));
+
     runApp(MyApp());
 }
 
@@ -26,6 +30,30 @@ class MyApp extends StatelessWidget
         return MaterialApp
         (
             debugShowCheckedModeBanner: false,
+
+            localeListResolutionCallback: (locales, supportedLocales)
+            {
+                print('device locales=$locales supported locales=$supportedLocales');
+                for (Locale locale in locales)
+                {
+                    // Si el lenguaje del dispositivo no es español //
+                    if (supportedLocales.contains(locale))
+                    {
+                        return locale;
+                    }
+                }
+                return Locale("id");
+            },
+            locale: Locale("en"),
+
+            localizationsDelegates:
+            [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate
+            ],
+            supportedLocales: S.delegate.supportedLocales,
 
             title: '♟ Ocho Reinas | Juego online',
             home: Scaffold
@@ -46,17 +74,7 @@ class MyApp extends StatelessWidget
                         )
                     )
                 )
-            ),
-
-            localizationsDelegates:
-            [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate
-            ],
-
-            supportedLocales: S.delegate.supportedLocales
+            )
         );
     }
 }
