@@ -194,12 +194,15 @@ class ChessTableState extends State <ChessTable>
             ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar
                 (
-                    padding: EdgeInsets.symmetric(vertical: 6.88),
-                    content: Text
+                    content: Padding
                     (
-                        S.current.winMessage,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 16)
+                        padding: EdgeInsets.symmetric(vertical: 6.88),
+                        child: Text
+                        (
+                            S.current.winMessage,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 16)
+                        )
                     ),
                     backgroundColor: AppColors.closedBox,
                     duration: Duration(milliseconds: 2888),
