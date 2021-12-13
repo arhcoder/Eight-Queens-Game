@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget
 
             localeListResolutionCallback: (locales, supportedLocales)
             {
-                print('device locales = $locales supported locales = $supportedLocales');
+                print("\n* Device Locales = $locales;\n* Supported Locales = $supportedLocales;");
                 // for (Locale locale in locales)
                 // {
                     // Si el lenguaje principal del dispositivo es soportado por la app //
@@ -44,10 +44,10 @@ class MyApp extends StatelessWidget
                 // }
 
                 // Se usa inglés como default para idiomas no soportados.
-                return Locale('en');
+                return Locale("en");
             },
             supportedLocales: S.delegate.supportedLocales,
-            // locale: Locale('es'),
+            // locale: Locale("es"),
 
             localizationsDelegates:
             [
