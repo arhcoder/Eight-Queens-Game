@@ -8,8 +8,8 @@ class AppColors extends StatelessWidget
 
     static Color darkBox = Color(0xFF44086A);
     static Color lightBox = Color(0xFF5C309E);
-    static Color takenBox = Color(0xFFB6086C);
-    static Color closedBox = Color(0xFF300458);
+    static Color takenBox = Color(0xFFEA0858);
+    static Color closedBox = Color(0xFF2C0038);
 
     @override
     Widget build(BuildContext context)
