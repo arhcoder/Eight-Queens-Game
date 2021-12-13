@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:eight_queens_game/Theme.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import 'MyTitle.dart';
 
 import 'dart:js' as js;
 
-AppBar buildAppBar(String title) => AppBar
+AppBar buildAppBar() => AppBar
 (
     
     title: MouseRegion
@@ -22,7 +23,9 @@ AppBar buildAppBar(String title) => AppBar
                 String link = "https://github.com/arhcoder/eight-queens-game/";
                 js.context.callMethod('open', [link]);
             },
-            child: Text(title, style: GoogleFonts.staatliches(fontSize: 26.0))
+            // El título se separó del AppBar debido a que para obtener
+            // una traducción del texto, necesita un ancestro en su contexto.
+            child: MyTitle()
         )
     ),
     centerTitle: true,

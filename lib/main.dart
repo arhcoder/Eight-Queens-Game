@@ -4,8 +4,6 @@ import 'package:eight_queens_game/Theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
 
-import 'package:eight_queens_game/Theme.dart';
-
 import 'Header.dart';
 import 'Chess.dart';
 
@@ -29,20 +27,10 @@ class MyApp extends StatelessWidget
         (
             debugShowCheckedModeBanner: false,
 
-            localizationsDelegates:
-            [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate
-            ],
-
-            supportedLocales: S.delegate.supportedLocales,
-
             title: '♟ Ocho Reinas | Juego online',
             home: Scaffold
             (
-                appBar: buildAppBar("${S.current.app_title}"),
+                appBar: buildAppBar(),
 
                 body: SingleChildScrollView
                 (
@@ -58,7 +46,17 @@ class MyApp extends StatelessWidget
                         )
                     )
                 )
-            )
+            ),
+
+            localizationsDelegates:
+            [
+                S.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalCupertinoLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate
+            ],
+
+            supportedLocales: S.delegate.supportedLocales
         );
     }
 }
