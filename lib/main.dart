@@ -33,18 +33,21 @@ class MyApp extends StatelessWidget
 
             localeListResolutionCallback: (locales, supportedLocales)
             {
-                print('device locales=$locales supported locales=$supportedLocales');
-                for (Locale locale in locales)
-                {
-                    // Si el lenguaje del dispositivo no es español //
-                    if (supportedLocales.contains(locale))
+                print('device locales = $locales supported locales = $supportedLocales');
+                // for (Locale locale in locales)
+                // {
+                    // Si el lenguaje principal del dispositivo es soportado por la app //
+                    if (supportedLocales.contains(locales[0]))
                     {
-                        return locale;
+                        return locales[0];
                     }
-                }
-                return Locale("id");
+                // }
+
+                // Se usa inglés como default para idiomas no soportados.
+                return Locale('en');
             },
-            locale: Locale("en"),
+            supportedLocales: S.delegate.supportedLocales,
+            // locale: Locale('es'),
 
             localizationsDelegates:
             [
@@ -53,7 +56,6 @@ class MyApp extends StatelessWidget
                 GlobalCupertinoLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate
             ],
-            supportedLocales: S.delegate.supportedLocales,
 
             title: '♟ Ocho Reinas | Juego online',
             home: Scaffold
