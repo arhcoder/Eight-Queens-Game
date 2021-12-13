@@ -24,7 +24,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "about_button" : MessageLookupByLibrary.simpleMessage("Got it!"),
     "about_description" : MessageLookupByLibrary.simpleMessage("Developed by Alejandro Ramos | @arhcoder.\n\n• Special thanks to Sriram Thiagarajan.\n• Icons taken from Flaticon.com.\n• Made with Flutter 💙"),
     "about_title" : MessageLookupByLibrary.simpleMessage("About..."),
-    "app_title" : MessageLookupByLibrary.simpleMessage("EIGHT QUEENS GAME"),
     "button_about" : MessageLookupByLibrary.simpleMessage("About..."),
     "button_github" : MessageLookupByLibrary.simpleMessage("Source code"),
     "button_howToPlay" : MessageLookupByLibrary.simpleMessage("How to play"),
@@ -37,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "howToPlay_button" : MessageLookupByLibrary.simpleMessage("Got it!"),
     "howToPlay_description" : MessageLookupByLibrary.simpleMessage("Put EIGHT queens in the chessboard.\n\n• Queens must not attack each other.\n• Queens attack cross and diagonal.\n• Click on a square to place a queen."),
     "howToPlay_title" : MessageLookupByLibrary.simpleMessage("How to play"),
+    "title" : MessageLookupByLibrary.simpleMessage("EIGHT QUEENS GAME"),
     "winMessage" : MessageLookupByLibrary.simpleMessage("Congratulations! You won the game...")
   };
 }

@@ -24,7 +24,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "about_button" : MessageLookupByLibrary.simpleMessage("Entendido"),
     "about_description" : MessageLookupByLibrary.simpleMessage("Desarrollado por Alejandro Ramos | @arhcoder.\n\n• Agradecimiento especial a Sriram Thiagarajan.\n• Iconos sacados de Flaticon.com.\n• Desarrollado con Flutter 💙"),
     "about_title" : MessageLookupByLibrary.simpleMessage("Acerca de..."),
-    "app_title" : MessageLookupByLibrary.simpleMessage("JUEGO DE LAS OCHO REINAS"),
     "button_about" : MessageLookupByLibrary.simpleMessage("Acerca de..."),
     "button_github" : MessageLookupByLibrary.simpleMessage("Código fuente"),
     "button_howToPlay" : MessageLookupByLibrary.simpleMessage("¿Cómo jugar?"),
@@ -37,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "howToPlay_button" : MessageLookupByLibrary.simpleMessage("Entendido"),
     "howToPlay_description" : MessageLookupByLibrary.simpleMessage("Coloca OCHO reinas en el siguiente tablero de ajedrez.\n\n• Las reinas no pueden atacarse mutuamente.\n• Las reinas atacan en cruz y en diagonal.\n• Haz clic sobre una casilla para colocar una reina."),
     "howToPlay_title" : MessageLookupByLibrary.simpleMessage("¿Cómo jugar?"),
+    "title" : MessageLookupByLibrary.simpleMessage("JUEGO DE LAS OCHO REINAS"),
     "winMessage" : MessageLookupByLibrary.simpleMessage("¡Felicidades! Ganaste el juego...")
   };
 }

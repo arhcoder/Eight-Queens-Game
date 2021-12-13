@@ -7,6 +7,6 @@ class MyTitle extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        return Text(S.current.app_title, style: GoogleFonts.staatliches(fontSize: 26.0));
+        return Text(S.current.title, style: GoogleFonts.staatliches(fontSize: 26.0));
     }
 }

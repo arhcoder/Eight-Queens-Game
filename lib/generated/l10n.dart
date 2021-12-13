@@ -36,10 +36,10 @@ class S {
   }
 
   /// `EIGHT QUEENS GAME`
-  String get app_title {
+  String get title {
     return Intl.message(
       'EIGHT QUEENS GAME',
-      name: 'app_title',
+      name: 'title',
       desc: '',
       args: [],
     );
